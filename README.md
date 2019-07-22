@@ -1,2 +1,3 @@
 # Capstone_Design
-Idea, code, etc..
+Idea, code, etc...
+회의록, 아이디어, 코드 진행 상황등을 올립니다!

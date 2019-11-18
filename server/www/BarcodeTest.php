@@ -12,21 +12,17 @@
 	mysqli_query($con, 'SET NAMES utf8');
 
 	$userBarcode = $_POST['userBarcode'];
+	$userID = "testing";
+	$date = date('Y-m-d H:i:s');
 
-	$sql = "select * from barcodeInfo where userBarcode = ?";
+	$sql = "insert into barcodeInfo values (?,?,?)";
 	$statement = mysqli_prepare($con, $sql);
-	mysqli_stmt_bind_param($statement, "s", $userBarcode);
+	mysqli_stmt_bind_param($statement, "sss", $userID, $userBarcode, $date);
 	mysqli_stmt_execute($statement);
-
-	mysqli_stmt_store_result($statement);
-	mysqli_stmt_bind_result($statement, $userBarcode);
-
+	
+	
 	$response = array();
-	$response['success'] = false;
-
-	while(mysqli_stmt_fetch($statement)){
-		$response['success'] = true;
-	}
+	$response['success'] = True;
 
 	echo json_encode($response);
 ?>

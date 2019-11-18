@@ -11,23 +11,25 @@
 
 	mysqli_query($con, 'SET NAMES utf8');
 
-	$userBarcode = $_POST['userBarcode'];
-
-	$sql = "select * from barcodeInfo where userBarcode = ?";
-	$statement = mysqli_prepare($con, $sql);
-	mysqli_stmt_bind_param($statement, "s", $userBarcode);
+	$statement = mysqli_prepare($con, "select * from barcodeInfo");
 	mysqli_stmt_execute($statement);
-
+	
 	mysqli_stmt_store_result($statement);
-	mysqli_stmt_bind_result($statement, $userBarcode);
+	mysqli_stmt_bind_result($statement, $userID, $userBarcode, $time);
 
 	$response = array();
 	$response['success'] = false;
 
-	while(mysqli_stmt_fetch($statement)){
-		$response['success'] = true;
+	while(mysqli_stmt_fetch($statement)) {
+		echo $row;
+		$response['success'] = True;
+		$response['userID_F'] = $userID;
+		$response['userBarcode'] = $userBarcode;
+		$response['time'] = $time;
+		echo json_encode($response);
+		echo "</br>\n";
 	}
 
-	echo json_encode($response);
+
 ?>
 

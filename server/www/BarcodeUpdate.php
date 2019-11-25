@@ -13,9 +13,10 @@
 
 	$userID = $_POST["userID"];
 	$userBarcode = $_POST['userBarcode'];
+	$userTime = date("Y-m-d H:i:s");
 
-	$statement = mysqli_prepare($con, "insert into barcodeInfo values (?,?)");
-	mysqli_stmt_bind_param($statement, "ss", $userID, $userBarcode);
+	$statement = mysqli_prepare($con, "insert into barcodeInfo values (?,?,?)");
+	mysqli_stmt_bind_param($statement, "sss", $userID, $userBarcode, $userTime);
 	mysqli_stmt_execute($statement);
 	
 

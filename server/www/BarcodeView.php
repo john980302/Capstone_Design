@@ -21,7 +21,6 @@
 	$response['success'] = false;
 
 	while(mysqli_stmt_fetch($statement)) {
-		echo $row;
 		$response['success'] = True;
 		$response['userID_F'] = $userID;
 		$response['userBarcode'] = $userBarcode;

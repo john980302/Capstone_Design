@@ -1,0 +1,17 @@
+[Human Pose Estimation using OpenCV website]
+https://www.learnopencv.com/deep-learning-based-human-pose-estimation-using-opencv-cpp-python/
+
+[LPAC]
+http://vision.cse.psu.edu/publications/publications.shtml
+
+[Sitting Posture Recognition git]
+https://github.com/nvinayvarma189/Sitting-Posture-Recognition
+
+[DBGuide.net (데이터 전문가 지식포털)]
+http://www.dbguide.net/knowledge.db
+ - 로그인을 하여 왼쪽에 전문가칼럼을 클릭 후, 제목으로 걸음걸이를 검색.
+ - 아이디: john1920
+ - 비번: dnwls1920@@
+
+[골빈해커 github]
+https://github.com/golbin/TensorFlow-Tutorials/blob/master/10%20-%20RNN/03%20-%20Seq2Seq.py

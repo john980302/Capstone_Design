@@ -1,0 +1,9 @@
+1. 데이터 전처리 작업을 진행중
+   각 사람데이터를 window_size = 128로 쪼개어서 저장을 하여 진행을 해야함
+   각 사람데이터가 서로 다른 엑셀파일로 되어있어서 각 엑셀파일들을 읽고 변수에 저장을 해야함
+   각 변수의 인덱스에 맞는 레이블을 정하여 one_hot_encoding으로 처리하여 output을 정함
+
+2. 이미 만들어진 모델을 사용함
+   관련 URL은 
+   https://excelsior-cjh.tistory.com/185
+   https://blog.naver.com/wideeyed/221160038616
